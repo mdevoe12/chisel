@@ -20,7 +20,13 @@ class Chisel
   end
 
   def make_header(text)
-    if text.include? "###"
+    if text.include? "#####"
+      text = text.gsub(/#/, "")
+      "<h5>#{text}</h5>"
+    elsif text.include? "####"
+      text = text.gsub(/#/, "")
+      "<h4>#{text}</h4>"
+    elsif text.include? "###"
       text = text.gsub(/#/, "")
       "<h3>#{text}</h3>"
     elsif text.include? "##"
