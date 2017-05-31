@@ -13,7 +13,8 @@ class Chisel
       paragraphs = text.split("\n")
       paragraph_1 = paragraphs[0].to_s
       paragraph_2 = paragraphs[2].to_s
-      "<p>#{paragraph_1}</p>\n<p>#{paragraph_2}"
+      
+      "<p>#{paragraph_1}</p>\n<p>#{paragraph_2}</p>"
     else
     end
 
