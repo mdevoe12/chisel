@@ -23,8 +23,15 @@ class ChiselTest < Minitest::Test
   def test_if_multiple_sentences_work
     chisel = Chisel.new
     expected = "<p>This is the first line. This is the second line.</p>"
-    actual = chisel.make_paragraph("This is the first line. 
-This is the second line.")
+    actual = chisel.make_paragraph("This is the first line.\n This is the second line.")
+
+    assert_equal expected, actual
+  end
+
+  def test_if_multiple_paragraphs_work
+    chisel = Chisel.new
+    expected = "<p>This is the first paragraph.</p>\n<p>This is the second paragraph.</p>"
+    actual = chisel.make_multi_paragraphs("This is the first paragraph.\n\nThis is the second paragraph.")
 
     assert_equal expected, actual
   end

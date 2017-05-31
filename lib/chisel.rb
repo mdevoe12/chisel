@@ -8,4 +8,11 @@ class Chisel
     "<p>#{text}</p>"
   end
 
+  def make_multi_paragraphs(text)
+    if text.include? "\n\n"
+      sentences = text.split("\n")
+      
+
+  end
+
 end
