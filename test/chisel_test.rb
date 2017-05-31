@@ -65,7 +65,15 @@ class ChiselTest < Minitest::Test
     expected = "<h4>Header</h4>"
     actual = chisel.make_header("####Header")
 
-    assert_equal expected, actual  
+    assert_equal expected, actual
+  end
+
+  def test_if_header5_converts
+    chisel = Chisel.new
+    expected = "<h5>Header</h5>"
+    actual = chisel.make_header("#####Header")
+
+    assert_equal expected, actual
   end
 
 end
